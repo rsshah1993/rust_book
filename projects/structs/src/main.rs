@@ -45,6 +45,7 @@ fn main() {
     let user2 = User{
         email: String::from("seconduser@email.com"),
         username: String::from("seconduser"),
+        // define all the rest of the params identically to `user1`
         ..user1
     };
     println!("{}", user2.email);
@@ -88,7 +89,7 @@ fn main() {
 
     // accessing functions from within `impl` blocks
     // we are namespacing the `square` function inside
-    // the Rectangle type. (Later: modules are also defined similarly.)
+    // the Rectangle struct. (Later: modules are also defined similarly.)
     let square_obj = Rectangle::square(3);
     println!("Square object: {:#?}", square_obj);
 }
